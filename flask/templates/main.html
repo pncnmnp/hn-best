@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="author" content="parth_parikh">
+	<meta name="description" content="Created for personal use by Parth Parikh">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parth Parikh</title>
+
+</head>
+
+<body style="font-family: monospace; max-width: 600px;">
+	<h1>Hacker News - Best</h1>
+	<p>This API was created for my personal use. However, if you wish to use the API (<b>for personal use only</b>), here is the documentation: </p>
+	<p>RSS Feed: <a href="./rss">https://hnbest.pythonanywhere.com/rss</a></p>
+	<p>RSS parameters: 
+		<ul>
+			<li><p>
+					<b>limit</b>: number of items from the best page of Hacker News (items are not stored locally but fetched in real time, so avoid large limit values).
+				</p>
+				<p>
+					<u>default</u>: 10
+				</p>
+				<p>
+					<u>example</u>: <a href="./rss?limit=10">https://hnbest.pythonanywhere.com/rss?limit=10</a>
+				</p>
+			</li>
+			<li><p>
+					<b>nowords</b>: filters out <u>titles</u> containing these words (words are in list format).
+				</p>	
+				<p>
+					<u>default</u>: None
+				</p>
+				<p>
+					<u>example</u>: <a href="./rss?nowords=['google', 'apple', 'facebook']">https://hnbest.pythonanywhere.com/rss?nowords=['google', 'apple', 'facebook']</a>
+				</p>
+			</li>
+			<li>
+				<p>
+					<b>similar</b>: instead of directly matching two words, the API is using a similarity metric. This parameter assigns the metric's threshold. for eg: 'covid-19' and 'Covid19' has a similarity score of 0.8.
+				</p>
+				<p>
+					<u>default</u>: 0.8
+				</p>
+				<p>
+					<u>example</u>: <a href="./rss?similar=0.75">https://hnbest.pythonanywhere.com/rss?similar=0.75</a>
+				</p>
+			</li>
+		</ul>
+	</p>
+
+	<p>Github: <a href="https://github.com/pncnmnp/hn-best">https://github.com/pncnmnp/hn-best</a></p>
+
+	<p>Hacker News API: <a href="https://github.com/HackerNews/API">https://github.com/HackerNews/API</a></p>
+</body>
+</html>
